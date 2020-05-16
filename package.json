@@ -21,6 +21,12 @@
   },
   "homepage": "https://github.com/akulahere/frontend-project-lvl1#readme",
   "dependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint-plugin-jest": "^23.13.0"
   }
 }
