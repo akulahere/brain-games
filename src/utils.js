@@ -12,4 +12,18 @@ const welcomeMessage = () => {
   console.log('Welcome to the Brain Games!');
 };
 
-export { randomNumber, askName, welcomeMessage };
+const isRightAnswer = (rightAnswer, userAnswer) => {
+  if (String(rightAnswer) === userAnswer) {
+    console.log('Correct!');
+    return true;
+  }
+  console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
+  return false;
+};
+
+export {
+  randomNumber,
+  askName,
+  welcomeMessage,
+  isRightAnswer,
+};
