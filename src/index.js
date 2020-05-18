@@ -5,7 +5,6 @@ const gameRunner = (game, gameDescription) => {
   welcomeMessage();
   const name = askName();
   console.log(gameDescription);
-  console.log(`${gameDescription}`);
   // let gameAttempts = 0;
   for (let gameAttempts = 0; gameAttempts < 3; gameAttempts += 1) {
     const gameResult = game();
