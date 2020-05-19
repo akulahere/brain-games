@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { randomNumber } from '../utils.js';
+import { randomNumber, isRightAnswer } from '../utils.js';
 
 const gcd = () => {
   const firstNumber = randomNumber(100);
@@ -13,12 +13,7 @@ const gcd = () => {
   };
   const rightAnswer = gcdCalc(firstNumber, secondNumber);
   const userAnswer = readlineSync.question('Your answer: ');
-  if (String(rightAnswer) === userAnswer) {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
-  return false;
+  isRightAnswer(rightAnswer, userAnswer);
 };
 
 const gcdGameDescription = 'Find the greatest common divisor of given numbers.';
