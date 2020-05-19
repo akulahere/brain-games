@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-import { askName, calcGame } from '../src/cli.js';
+import gameRunner from '../src/index.js';
+import { calcGame as game, calcGameDescription as gameDescription } from '../src/games/calc.js';
 
-console.log('Welcome to the Brain Games!');
-const name = askName();
-console.log('What is the result of the expression?');
-calcGame(name);
+gameRunner(game, gameDescription);
