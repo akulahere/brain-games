@@ -12,6 +12,7 @@ const isPrime = (num) => {
   }
   return true;
 };
+
 const prime = () => {
   const isPrimeNumber = randomNumber(100);
   const rightAnswer = isPrime(isPrimeNumber) ? 'yes' : 'no';

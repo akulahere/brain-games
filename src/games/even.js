@@ -3,7 +3,6 @@ import { randomNumber, isRightAnswer } from '../utils.js';
 
 const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
 
-
 const askIsEven = () => {
   const isEvenNumber = randomNumber(100);
   const rightAnswer = isEven(isEvenNumber);
@@ -13,4 +12,5 @@ const askIsEven = () => {
 };
 
 const evenGameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 export { askIsEven, evenGameDescription };
