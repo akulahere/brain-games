@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const randomNumber = (maxNumber = 10) => Math.round(Math.random() * maxNumber) + 1;
+const randomNumber = (maxNumber = 10) => Math.floor(Math.random() * maxNumber) + 1;
 
 const askName = () => {
   const name = readlineSync.question('May I have your name? ');

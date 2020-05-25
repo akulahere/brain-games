@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import { randomNumber, isRightAnswer } from '../utils.js';
 
 const calcGame = () => {
-  const operationIndex = randomNumber(2);
+  const operationIndex = randomNumber(3);
   const firstNumber = randomNumber(10);
   const secondNumber = randomNumber(10);
   let rightAnswer;
