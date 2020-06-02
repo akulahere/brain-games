@@ -1,4 +1,4 @@
-import { randomNumber } from '../utils.js';
+import randomNumber from '../utils.js';
 
 const progression = () => {
   const progressionSize = 10;

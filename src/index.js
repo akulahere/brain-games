@@ -1,4 +1,4 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 const runGame = (game, gameDescription) => {
   console.log('Welcome to the Brain Games!');
@@ -8,12 +8,12 @@ const runGame = (game, gameDescription) => {
     const [question, rightAnswer] = game();
     console.log(`Question ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer != rightAnswer) {
+    if (userAnswer !== String(rightAnswer)) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
       console.log(`Let's try again, ${name}`);
       break;
     }
-    console.log(`Correct`);
+    console.log('Correct');
     if (gameAttempts === 2) {
       console.log(`Congratulations, ${name}!`);
     }

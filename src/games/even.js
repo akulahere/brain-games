@@ -1,4 +1,4 @@
-import { randomNumber } from '../utils.js';
+import randomNumber from '../utils.js';
 
 const isEvenAnswer = (num) => (num % 2 === 0 ? 'yes' : 'no');
 
