@@ -1,7 +1,7 @@
 import { welcomeMessage, askName } from './utils.js';
 
-const gameRunner = (game, gameDescription) => {
-  welcomeMessage();
+const runGame = (game, gameDescription) => {
+  console.log('Welcome to the Brain Games!');
   const name = askName();
   console.log(gameDescription);
   for (let gameAttempts = 0; gameAttempts < 3; gameAttempts += 1) {
@@ -16,4 +16,4 @@ const gameRunner = (game, gameDescription) => {
   }
 };
 
-export default gameRunner;
+export default runGame;
