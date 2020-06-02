@@ -6,7 +6,6 @@ env:
 
 extends:
   - 'airbnb-base'
-  - 'plugin:jest/recommended'
 
 rules:
   no-console: 0
