@@ -4,26 +4,25 @@ const randomNumber = (maxNumber = 10) => Math.floor(Math.random() * maxNumber) +
 
 const askName = () => {
   const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello ${name}`);
   return name;
-};
-
-const welcomeMessage = () => {
-  console.log('Welcome to the Brain Games!');
 };
 
 const isRightAnswer = (rightAnswer, userAnswer) => {
   if (String(rightAnswer) === userAnswer) {
-    console.log('Correct!');
     return true;
   }
-  console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
+  console.log();
   return false;
 };
+
+const printResult = (rightAnswer, userAnswer) => {
+  isRightAnswer(rightAnswer, userAnswer) ? console.log('Correct')
+      : console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
+}
 
 export {
   randomNumber,
   askName,
-  welcomeMessage,
   isRightAnswer,
+  printResult
 };
