@@ -1,5 +1,4 @@
-import readlineSync from 'readline-sync';
-import { randomNumber, isRightAnswer } from '../utils.js';
+import { randomNumber } from '../utils.js';
 
 const progression = () => {
   const progressionSize = 10;
@@ -12,9 +11,8 @@ const progression = () => {
   }
   const rightAnswer = progressionArray[answerIndex];
   progressionArray[answerIndex] = '..';
-  console.log(`Question: ${progressionArray.join(' ')}`);
-  const userAnswer = readlineSync.question('Your answer: ');
-  return isRightAnswer(rightAnswer, userAnswer);
+  const question = `Question: ${progressionArray.join(' ')}`;
+  return [question, rightAnswer];
 };
 
 const progressionGameDescription = 'What number is missing in the progression?';
