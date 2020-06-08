@@ -1,4 +1,5 @@
 import randomNumber from '../utils.js';
+import runGame from '../index.js';
 
 const progression = () => {
   const progressionSize = 10;
@@ -9,7 +10,7 @@ const progression = () => {
   for (let i = 1; i < progressionSize; i += 1) {
     progressionArray.push(progressionStartNumber + progressionStep * i);
   }
-  const rightAnswer = progressionArray[answerIndex];
+  const rightAnswer = String(progressionArray[answerIndex]);
   progressionArray[answerIndex] = '..';
   const question = `Question: ${progressionArray.join(' ')}`;
   return [question, rightAnswer];
@@ -17,4 +18,8 @@ const progression = () => {
 
 const progressionGameDescription = 'What number is missing in the progression?';
 
-export { progression, progressionGameDescription };
+const runProgressionGame = () => {
+  runGame(progression, progressionGameDescription);
+};
+
+export default runProgressionGame;
