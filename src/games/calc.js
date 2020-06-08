@@ -1,4 +1,5 @@
 import randomNumber from '../utils.js';
+import runGame from '../index.js';
 
 const calcGame = () => {
   const operationIndex = randomNumber(3);
@@ -10,13 +11,13 @@ const calcGame = () => {
   let rightAnswer;
   switch (operationSymbol) {
     case '+':
-      rightAnswer = firstNumber + secondNumber;
+      rightAnswer = String(firstNumber + secondNumber);
       break;
     case '-':
-      rightAnswer = firstNumber - secondNumber;
+      rightAnswer = String(firstNumber - secondNumber);
       break;
     case '*':
-      rightAnswer = firstNumber * secondNumber;
+      rightAnswer = String(firstNumber * secondNumber);
       break;
     default:
       console.log('Error with operation');
@@ -26,4 +27,8 @@ const calcGame = () => {
 
 const calcGameDescription = 'What is the result of the expression?';
 
-export { calcGame, calcGameDescription };
+const runCalcGame = () => {
+  runGame(calcGame, calcGameDescription);
+};
+
+export default runCalcGame;

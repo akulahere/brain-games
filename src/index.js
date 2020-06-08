@@ -1,22 +1,29 @@
 import readlineSync from 'readline-sync';
 
-const runGame = (game, gameDescription) => {
+const runGame = (getLevel, gameDescription) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   console.log(gameDescription);
-  for (let gameAttempts = 0; gameAttempts < 3; gameAttempts += 1) {
-    const [question, rightAnswer] = game();
-    console.log(`Question ${question}`);
+  let gameAttempts = 0;
+  let isPlayerWin = true;
+  const maxGameAttempts = 3;
+  while (gameAttempts < maxGameAttempts) {
+    const [question, rightAnswer] = getLevel();
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer !== String(rightAnswer)) {
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
-      console.log(`Let's try again, ${name}`);
+    if (userAnswer !== rightAnswer) {
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.`);
+      isPlayerWin = false;
       break;
     }
-    console.log('Correct');
-    if (gameAttempts === 2) {
-      console.log(`Congratulations, ${name}!`);
-    }
+    console.log('Correct!');
+    gameAttempts += 1;
+  }
+  if (isPlayerWin) {
+    console.log(`Congratulations, ${name}!`);
+  } else {
+    console.log(`Let's try again, ${name}!`);
   }
 };
 
