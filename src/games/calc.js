@@ -1,34 +1,44 @@
-import randomNumber from '../utils.js';
+import getRandomNumber from '../utils.js';
 import runGame from '../index.js';
 
-const calcGame = () => {
-  const operationIndex = randomNumber(3);
-  const firstNumber = randomNumber(10);
-  const secondNumber = randomNumber(10);
-  const operationSymbols = ['+', '-', '*'];
-  const operationSymbol = operationSymbols[operationIndex - 1];
-  const question = `${firstNumber} ${operationSymbol} ${secondNumber}`;
+const getRandomOperatorSymbol = () => {
+  const operatorsSymbols = ['+', '-', '*'];
+  const operatorIndex = getRandomNumber(0, 3);
+  const operatorSymbol = operatorsSymbols[operatorIndex];
+  return operatorSymbol;
+};
+
+const getCalcLevel = () => {
+  const firstNumber = getRandomNumber(1, 10);
+  const secondNumber = getRandomNumber(1, 10);
   let rightAnswer;
-  switch (operationSymbol) {
-    case '+':
-      rightAnswer = String(firstNumber + secondNumber);
-      break;
-    case '-':
-      rightAnswer = String(firstNumber - secondNumber);
-      break;
-    case '*':
-      rightAnswer = String(firstNumber * secondNumber);
-      break;
-    default:
-      console.log('Error with operation');
+  const currentOperation = getRandomOperatorSymbol();
+  try {
+    switch (currentOperation) {
+      case '+':
+        rightAnswer = String(firstNumber + secondNumber);
+        break;
+      case '-':
+        rightAnswer = String(firstNumber - secondNumber);
+        break;
+      case '*':
+        rightAnswer = String(firstNumber * secondNumber);
+        break;
+      default:
+        throw new RangeError();
+    }
+  } catch (e) {
+    console.log('Error with operator randomize');
+    return [`${firstNumber} + ${secondNumber}`, String(firstNumber + secondNumber)];
   }
+  const question = `${firstNumber} ${currentOperation} ${secondNumber}`;
   return [question, rightAnswer];
 };
 
 const calcGameDescription = 'What is the result of the expression?';
 
 const runCalcGame = () => {
-  runGame(calcGame, calcGameDescription);
+  runGame(getCalcLevel, calcGameDescription);
 };
 
 export default runCalcGame;

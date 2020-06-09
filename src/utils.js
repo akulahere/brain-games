@@ -1,4 +1,5 @@
+// get random number [minNumber, maxNumber)
+const getRandomNumber = (minNumber = 1, maxNumber = 10) => Math.floor(Math.random() * maxNumber)
+    + minNumber;
 
-const randomNumber = (maxNumber = 10) => Math.floor(Math.random() * maxNumber) + 1;
-
-export default randomNumber;
+export default getRandomNumber;
