@@ -13,23 +13,19 @@ const getCalcLevel = () => {
   const secondNumber = getRandomNumber(1, 10);
   let rightAnswer;
   const currentOperation = getRandomOperatorSymbol();
-  try {
-    switch (currentOperation) {
-      case '+':
-        rightAnswer = String(firstNumber + secondNumber);
-        break;
-      case '-':
-        rightAnswer = String(firstNumber - secondNumber);
-        break;
-      case '*':
-        rightAnswer = String(firstNumber * secondNumber);
-        break;
-      default:
-        throw new RangeError();
-    }
-  } catch (e) {
-    console.log('Error with operator randomize');
-    return [`${firstNumber} + ${secondNumber}`, String(firstNumber + secondNumber)];
+
+  switch (currentOperation) {
+    case '+':
+      rightAnswer = String(firstNumber + secondNumber);
+      break;
+    case '-':
+      rightAnswer = String(firstNumber - secondNumber);
+      break;
+    case '*':
+      rightAnswer = String(firstNumber * secondNumber);
+      break;
+    default:
+      throw new Error('Unknown operation');
   }
   const question = `${firstNumber} ${currentOperation} ${secondNumber}`;
   return [question, rightAnswer];
