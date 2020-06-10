@@ -1,19 +1,29 @@
 import getRandomNumber from '../utils.js';
 import runGame from '../index.js';
 
-const getProgressionLevel = () => {
-  const progressionSize = 10;
-  const progressionStep = getRandomNumber(1, 10);
-  const answerIndex = getRandomNumber(0, 2);
-  const progressionStartNumber = getRandomNumber(1, 100);
-  const progressionArray = [progressionStartNumber];
-  for (let i = 1; i < progressionSize; i += 1) {
-    progressionArray.push(progressionStartNumber + progressionStep * i);
+const getProgressionQuestion = (progressionSize, progressionStep,
+  progressionStartNumber, hiddenElementIndex) => {
+  let question = '';
+  for (let i = 0; i < progressionSize; i += 1) {
+    if (i !== hiddenElementIndex) {
+      question = `${question}${progressionStartNumber + progressionStep * i} `;
+    } else {
+      question = `${question}... `;
+    }
   }
-  const rightAnswer = String(progressionArray[answerIndex]);
-  progressionArray[answerIndex] = '..';
-  const question = `Question: ${progressionArray.join(' ')}`;
-  return [question, rightAnswer];
+  return question;
+};
+
+const progressionSize = 10;
+
+const getProgressionLevel = () => {
+  const progressionStep = getRandomNumber(1, 10);
+  const hiddenElementIndex = getRandomNumber(0, progressionSize - 1);
+  const progressionStartNumber = getRandomNumber(1, 100);
+  const question = getProgressionQuestion(progressionSize, progressionStep,
+    progressionStartNumber, hiddenElementIndex);
+  const answer = String(progressionStartNumber + progressionStep * hiddenElementIndex);
+  return [question, answer];
 };
 
 const progressionGameDescription = 'What number is missing in the progression?';

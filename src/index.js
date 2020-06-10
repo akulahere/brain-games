@@ -14,12 +14,13 @@ const runGame = (getLevel, gameDescription) => {
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== rightAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.`);
-      return console.log(`Let's try again, ${name}!`);
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
     console.log('Correct!');
     numberOfGameAttempts += 1;
   }
-  return console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default runGame;

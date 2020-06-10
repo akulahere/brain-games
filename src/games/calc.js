@@ -1,11 +1,9 @@
-import getRandomNumber from '../utils.js';
+import { getRandomNumber, getRandomArrayItem } from '../utils.js';
 import runGame from '../index.js';
 
 const getRandomOperatorSymbol = () => {
   const operatorsSymbols = ['+', '-', '*'];
-  const operatorIndex = getRandomNumber(0, 3);
-  const operatorSymbol = operatorsSymbols[operatorIndex];
-  return operatorSymbol;
+  return getRandomArrayItem(operatorsSymbols);
 };
 
 const getCalcLevel = () => {
@@ -13,7 +11,6 @@ const getCalcLevel = () => {
   const secondNumber = getRandomNumber(1, 10);
   let rightAnswer;
   const currentOperation = getRandomOperatorSymbol();
-
   switch (currentOperation) {
     case '+':
       rightAnswer = String(firstNumber + secondNumber);
