@@ -1,17 +1,13 @@
-import getRandomNumber from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 import runGame from '../index.js';
 
 const getProgressionQuestion = (progressionSize, progressionStep,
   progressionStartNumber, hiddenElementIndex) => {
-  let question = '';
+  const question = [];
   for (let i = 0; i < progressionSize; i += 1) {
-    if (i !== hiddenElementIndex) {
-      question = `${question}${progressionStartNumber + progressionStep * i} `;
-    } else {
-      question = `${question}... `;
-    }
+    question.push(i !== hiddenElementIndex ? progressionStartNumber + progressionStep * i : '...');
   }
-  return question;
+  return question.join(' ');
 };
 
 const progressionSize = 10;
