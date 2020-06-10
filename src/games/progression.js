@@ -5,7 +5,8 @@ const getProgressionQuestion = (progressionSize, progressionStep,
   progressionStartNumber, hiddenElementIndex) => {
   const question = [];
   for (let i = 0; i < progressionSize; i += 1) {
-    question.push(i !== hiddenElementIndex ? progressionStartNumber + progressionStep * i : '...');
+    const element = i !== hiddenElementIndex ? progressionStartNumber + progressionStep * i : '..';
+    question.push(element);
   }
   return question.join(' ');
 };
