@@ -1,13 +1,17 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/ebcc5026458fffe9baa1/maintainability)](https://codeclimate.com/github/akulahere/frontend-project-lvl1/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/ebcc5026458fffe9baa1/test_coverage)](https://codeclimate.com/github/akulahere/frontend-project-lvl1/test_coverage)
-![Node.js CI](https://github.com/akulahere/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg?branch=master)
+![Node.js CI](https://github.com/akulahere/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg?branch=master)  
+Games for brain which are developed with js.  
+To install:  
+`make install`  
+`npm link`
 
-[![asciicast](https://asciinema.org/a/gSWkI5rFQ5PvntURdKmIGt3Ei.svg)](https://asciinema.org/a/gSWkI5rFQ5PvntURdKmIGt3Ei)
-
-[![asciicast](https://asciinema.org/a/mvdPNrPNLcVcRj3948sQREHqK.svg)](https://asciinema.org/a/mvdPNrPNLcVcRj3948sQREHqK)
-
-[![asciicast](https://asciinema.org/a/jam9mVlvYZ2n1ivWHJpY2LMeL.svg)](https://asciinema.org/a/jam9mVlvYZ2n1ivWHJpY2LMeL)
-
-[![asciicast](https://asciinema.org/a/vNHCQY2zNNmWTAtNxEM9pGP6o.svg)](https://asciinema.org/a/vNHCQY2zNNmWTAtNxEM9pGP6o)
-
-[![asciicast](https://asciinema.org/a/66K73wcrxPHny287REGmxBcDH.svg)](https://asciinema.org/a/66K73wcrxPHny287REGmxBcDH)
+`brain-calc`  
+[![asciicast](https://asciinema.org/a/9O7OwntbkwAE7b9BA0iewRTjl.svg)](https://asciinema.org/a/9O7OwntbkwAE7b9BA0iewRTjl)
+`brain-even`
+[![asciicast](https://asciinema.org/a/d6OuwMJIMhynWPWSJICWL8Mb1.svg)](https://asciinema.org/a/d6OuwMJIMhynWPWSJICWL8Mb1)
+`brain-gcd`
+[![asciicast](https://asciinema.org/a/h8wxKjWRpTRtm3kW5xLNR2UaH.svg)](https://asciinema.org/a/h8wxKjWRpTRtm3kW5xLNR2UaH)
+`brain-prime`
+[![asciicast](https://asciinema.org/a/0TBkwqQsAzr6Imj8EiwREjr2I.svg)](https://asciinema.org/a/0TBkwqQsAzr6Imj8EiwREjr2I)
+`brain-progression`
+[![asciicast](https://asciinema.org/a/NIyZKIAjkZFtyTBqXloY31Hu4.svg)](https://asciinema.org/a/NIyZKIAjkZFtyTBqXloY31Hu4)
