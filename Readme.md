@@ -1,4 +1,4 @@
-#Brain games
+# Brain games
 [![Maintainability](https://api.codeclimate.com/v1/badges/ebcc5026458fffe9baa1/maintainability)](https://codeclimate.com/github/akulahere/frontend-project-lvl1/maintainability)
 ![Node.js CI](https://github.com/akulahere/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg?branch=master)  
 Games for brain which are developed with js.  
