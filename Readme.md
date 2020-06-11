@@ -5,7 +5,6 @@ Games for brain which are developed with js.
 To install:  
 ```
 make install  
-npm link
 ```  
 To run games:
 ```
