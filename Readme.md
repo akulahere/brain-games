@@ -1,10 +1,12 @@
+#Brain games
 [![Maintainability](https://api.codeclimate.com/v1/badges/ebcc5026458fffe9baa1/maintainability)](https://codeclimate.com/github/akulahere/frontend-project-lvl1/maintainability)
 ![Node.js CI](https://github.com/akulahere/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg?branch=master)  
 Games for brain which are developed with js.  
 To install:  
-`make install`  
-`npm link`
-
+```
+make install  
+npm link
+```
 `brain-calc`  
 [![asciicast](https://asciinema.org/a/9O7OwntbkwAE7b9BA0iewRTjl.svg)](https://asciinema.org/a/9O7OwntbkwAE7b9BA0iewRTjl)
 `brain-even`
