@@ -12,7 +12,6 @@ const getQuestion = (step, startNumber, hiddenElementIndex) => {
   return question.join(' ');
 };
 
-
 const getProgressionLevel = () => {
   const progressionStep = getRandomNumber(1, 10);
   const hiddenElementIndex = getRandomNumber(0, progressionSize - 1);
