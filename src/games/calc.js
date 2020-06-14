@@ -1,8 +1,8 @@
 import { getRandomNumber, getRandomArrayItem } from '../utils.js';
 import runGame from '../index.js';
 
-const calcResult = (first, second, operation) => {
-  switch (operation) {
+const calcResult = (first, second, operator) => {
+  switch (operator) {
     case '+':
       return first + second;
     case '-':
@@ -10,17 +10,17 @@ const calcResult = (first, second, operation) => {
     case '*':
       return first * second;
     default:
-      throw new Error('Unknown operation');
+      throw new Error('Unknown operator');
   }
 };
 
 const getCalcLevel = () => {
   const firstNumber = getRandomNumber(1, 10);
   const secondNumber = getRandomNumber(1, 10);
-  const operatorsSymbols = ['+', '-', '*'];
-  const currentOperation = getRandomArrayItem(operatorsSymbols);
-  const rightAnswer = String(calcResult(firstNumber, secondNumber, currentOperation));
-  const question = `${firstNumber} ${currentOperation} ${secondNumber}`;
+  const operators = ['+', '-', '*'];
+  const currentOperator = getRandomArrayItem(operators);
+  const rightAnswer = String(calcResult(firstNumber, secondNumber, currentOperator));
+  const question = `${firstNumber} ${currentOperator} ${secondNumber}`;
   return [question, rightAnswer];
 };
 
